@@ -1,0 +1,10 @@
+{
+    "name": "lioneagle/close-php-sdk",
+    "authors": [
+        {
+            "name": "James Mooring",
+            "email": "james@lioneagle.solutions"
+        }
+    ],
+    "require": {}
+}
