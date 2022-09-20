@@ -1,10 +1,21 @@
 {
-    "name": "lioneagle/close-php-sdk",
-    "authors": [
-        {
-            "name": "James Mooring",
-            "email": "james@lioneagle.solutions"
-        }
-    ],
-    "require": {}
+  "name": "lioneagle/close-php-sdk",
+  "authors": [
+    {
+      "name": "James Mooring",
+      "email": "james@lioneagle.solutions"
+    }
+  ],
+  "require-dev": {
+    "orchestra/testbench": "^7.7"
+  },
+  "require": {
+    "illuminate/http": "^9.30"
+  },
+  "autoload": {
+    "psr-4": {
+      "Lioneagle\\Close\\": "src/",
+      "Lioneagle\\Close\\Tests\\": "tests/"
+    }
+  }
 }
