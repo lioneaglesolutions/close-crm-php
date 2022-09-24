@@ -11,12 +11,20 @@
   },
   "require": {
     "php": "^8.1",
-    "illuminate/http": "^9.30"
+    "illuminate/support": "^9.31",
+    "guzzlehttp/guzzle": "^7.5"
   },
   "autoload": {
     "psr-4": {
       "Lioneagle\\Close\\": "src/",
       "Lioneagle\\Close\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Lioneagle\\Close\\CloseServiceProvider"
+      ]
     }
   }
 }
