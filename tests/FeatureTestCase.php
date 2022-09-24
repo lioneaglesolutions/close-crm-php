@@ -3,10 +3,13 @@
 namespace Lioneagle\Close\Tests;
 
 use Lioneagle\Close\CloseServiceProvider;
+use Lioneagle\Close\Tests\Fixtures\CloseAPIFakes;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class FeatureTestCase extends Orchestra
 {
+    use CloseAPIFakes;
+
     protected function getPackageProviders($app): array
     {
         return [

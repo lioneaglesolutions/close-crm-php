@@ -17,6 +17,7 @@ class Leads
             ->client
             ->post('/lead', [
                 'name' => $lead->name,
+                'status' => $lead->status,
             ]);
 
         return Lead::fromRequest($response->json());

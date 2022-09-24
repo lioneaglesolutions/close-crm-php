@@ -16,8 +16,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Lioneagle\\Close\\": "src/",
-      "Lioneagle\\Close\\Tests\\": "tests/"
+      "Lioneagle\\Close\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Lioneagle\\Close\\Tests\\": "tests"
     }
   },
   "extra": {

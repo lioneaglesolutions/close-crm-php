@@ -1,20 +1,22 @@
 <?php
 
-namespace Lioneagle\Close\Tests\Integration;
+namespace Lioneagle\Close\Tests\Feature;
 
 use Illuminate\Foundation\Testing\WithFaker;
 use Lioneagle\Close\Facades\Close;
 use Lioneagle\Close\Leads\CreateLeadRequest;
 use Lioneagle\Close\Leads\Lead;
-use Lioneagle\Close\Tests\IntegrationTestCase;
+use Lioneagle\Close\Tests\FeatureTestCase;
 
-class LeadTest extends IntegrationTestCase
+class LeadTest extends FeatureTestCase
 {
     use WithFaker;
 
     /** @test */
     public function it_can_create_a_lead()
     {
+        $this->fakeCreateLead();
+
         $lead = Close::leads()
             ->create(
                 new CreateLeadRequest(
