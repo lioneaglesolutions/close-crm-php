@@ -26,8 +26,6 @@ class CloseClient
 
     protected function request(): PendingRequest
     {
-        dump($this->apiKey);
-
         return Http::withBasicAuth($this->apiKey, '')
             ->baseUrl($this->baseUrl);
     }

@@ -10,7 +10,7 @@ class Leads
         private readonly Close $close
     ) {}
 
-    public function create(Lead $lead)
+    public function create(CreateLeadRequest $lead): Lead
     {
         $response = $this
             ->close
@@ -19,6 +19,6 @@ class Leads
                 'name' => $lead->name,
             ]);
 
-        dump($response->headers());
+        return Lead::fromRequest($response->json());
     }
 }

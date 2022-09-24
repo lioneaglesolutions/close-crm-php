@@ -20,5 +20,7 @@ class FeatureTestCase extends Orchestra
         $config = $app->get('config');
 
         $config->set('close.api_key', 'foo');
+
+        $app->loadEnvironmentFrom('.env');
     }
 }

@@ -3,12 +3,10 @@
 namespace Lioneagle\Close\Tests;
 
 use Lioneagle\Close\CloseServiceProvider;
-use Orchestra\Testbench\TestCase;
+use Orchestra\Testbench\TestCase as Orchestra;
 
-class IntegrationTestCase extends TestCase
+class IntegrationTestCase extends Orchestra
 {
-    protected $loadEnvironmentVariables = true;
-    
     protected function getPackageProviders($app): array
     {
         return [
