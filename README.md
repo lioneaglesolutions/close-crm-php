@@ -1,1 +1,1 @@
-# Unofficial PHP SDK For Close CRM
+# Laravel package to interact with Close CRM
