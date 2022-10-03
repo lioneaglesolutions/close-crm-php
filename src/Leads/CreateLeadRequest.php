@@ -8,6 +8,8 @@ class CreateLeadRequest
 {
     protected array $contacts = [];
 
+    protected array $customFields = [];
+
     public function __construct(
         public readonly string $name,
         public readonly ?string $status = null
@@ -36,7 +38,20 @@ class CreateLeadRequest
             $data = $this->mergeContacts($data);
         }
 
+        if (count($this->customFields) > 0) {
+            foreach($this->customFields as $key => $value) {
+                $data[$key] = $value;
+            }
+        }
+
         return $data;
+    }
+
+    public function addCustomField(string $key, string $value): static
+    {
+        $this->customFields[$key] = $value;
+
+        return $this;
     }
 
     private function mergeContacts(array $data): array
