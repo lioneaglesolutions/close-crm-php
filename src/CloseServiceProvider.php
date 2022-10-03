@@ -12,7 +12,7 @@ class CloseServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__ . '/../config/close.php' => config_path('close.php'),
-            ], 'close');
+            ], 'config');
         }
     }
 
