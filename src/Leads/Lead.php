@@ -2,21 +2,18 @@
 
 namespace Lioneagle\Close\Leads;
 
-class Lead
-{
-    public function __construct(
-        public readonly string $id,
-        public readonly string $name,
-        public readonly string $statusLabel,
-        private readonly array $attributes = []
-    ) {}
+use Lioneagle\Close\Entity;
 
+/**
+ * @property string $id
+ * @property string $name
+ * @property string $status_label
+ */
+class Lead extends Entity
+{
     public static function fromRequest(array $data): static
     {
         return new static(
-            id: $data['id'],
-            name: $data['name'],
-            statusLabel: $data['status_label'],
             attributes: $data
         );
     }

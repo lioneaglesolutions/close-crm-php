@@ -24,6 +24,12 @@ class CloseClient
             ->post($uri, $body);
     }
 
+    public function put(string $uri, array $body = []): Response
+    {
+        return $this->request()
+            ->put($uri, $body);
+    }
+
     protected function request(): PendingRequest
     {
         return Http::withBasicAuth($this->apiKey, '')
