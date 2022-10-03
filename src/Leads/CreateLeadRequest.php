@@ -40,7 +40,7 @@ class CreateLeadRequest
 
         if (count($this->customFields) > 0) {
             foreach($this->customFields as $key => $value) {
-                $data[$key] = $value;
+                $data['custom.' . $key] = $value;
             }
         }
 
