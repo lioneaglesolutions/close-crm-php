@@ -30,7 +30,7 @@ class CloseServiceProvider extends ServiceProvider
 
         if (! $apiKey || ! $baseUrl) {
             throw new InvalidArgumentException(
-                "The Close configuration is invalid - ensure API Key and Base URL are set."
+                'The Close configuration is invalid - ensure API Key and Base URL are set.'
             );
         }
 
